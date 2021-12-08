@@ -3,10 +3,11 @@ import Chart from "react-google-charts";
 import {useEffect, useState} from "react";
 import axios from "axios";
 
-export default function CPUtempGauge() {
+export default function CPUtempGauge(props) {
     const router = useRouter()
-    const [data,setData] = useState(0);
+    const data = props.data;
 
+    /*
     useEffect(function () {
         setInterval(getData,500);
     },[]);
@@ -15,7 +16,7 @@ export default function CPUtempGauge() {
         const resposta = await axios.get(process.env.NEXT_PUBLIC_API_URL+"/CPU");
         setData(parseFloat(resposta.data.temp.toFixed(0)));
     }
-
+    */
 
     return (
         <Chart

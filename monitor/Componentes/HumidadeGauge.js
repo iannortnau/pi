@@ -3,11 +3,12 @@ import Chart from "react-google-charts";
 import {useEffect, useState} from "react";
 import axios from "axios";
 
-export default function HumidadeGauge() {
+export default function HumidadeGauge(props) {
     const router = useRouter()
-    const [data,setData] = useState(0);
+    const data = props.data;
     const [load,setLoad] = useState(false);
 
+    /*
     useEffect(function () {
         getData();
     },[]);
@@ -22,7 +23,7 @@ export default function HumidadeGauge() {
         setTimeout(getData,3000);
         console.log("leu");
     }
-
+    */
     return (
         <Chart
             width={400}

@@ -3,14 +3,16 @@ import Chart from "react-google-charts";
 import {useEffect, useState} from "react";
 import axios from "axios";
 
-export default function ARtempGauge() {
+export default function ARtempGauge(props) {
     const router = useRouter()
-    const [data,setData] = useState(0);
+    const data = props.data;
     const [load,setLoad] = useState(false);
 
+    /*
     useEffect(function () {
         getData();
     },[]);
+
 
     async function getData(){
         try {
@@ -22,6 +24,7 @@ export default function ARtempGauge() {
         setTimeout(getData,3000);
         console.log("leu");
     }
+    */
 
     return (
         <Chart
