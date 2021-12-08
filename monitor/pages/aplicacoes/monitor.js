@@ -31,7 +31,7 @@ export default function Monitor() {
         { type: 'date', label: 'Temp' },
         'C',
         'A',
-        'H'
+        'U'
     ]]);
 
     function vaiMonitor(e){

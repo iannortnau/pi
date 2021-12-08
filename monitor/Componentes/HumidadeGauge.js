@@ -32,7 +32,7 @@ export default function HumidadeGauge(props) {
             loader={<div>Loading Chart</div>}
             data={[
                 ['Label', 'Value'],
-                ['Humidade', data],
+                ['Umidade', data],
             ]}
             options={{
                 minorTicks: 10,
