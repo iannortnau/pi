@@ -27,7 +27,7 @@ export default function Monitor() {
         { type: 'date', label: 'Temp' },
         '',
     ]]);
-    const [line,setLine] = useState([[
+    let [line,setLine] = useState([[
         { type: 'date', label: 'Temp' },
         'C',
         'A',
@@ -48,10 +48,18 @@ export default function Monitor() {
             const resposta = await axios.get(process.env.NEXT_PUBLIC_API_URL+"/data");
             console.log(resposta);
             setData(resposta.data);
-            cpu.push([new Date(resposta.data.time),resposta.data.cpu]);
-            hum.push([new Date(resposta.data.time),resposta.data.hum]);
-            temp.push([new Date(resposta.data.time),resposta.data.temp]);
+            //cpu.push([new Date(resposta.data.time),resposta.data.cpu]);
+            //hum.push([new Date(resposta.data.time),resposta.data.hum]);
+            //temp.push([new Date(resposta.data.time),resposta.data.temp]);
             line.push([new Date(resposta.data.time),resposta.data.cpu,resposta.data.hum,resposta.data.temp]);
+            if(line.length>50){
+                const auxLine = [];
+                auxLine.push(line[0]);
+                for (let i = 2; i < line.length; i++){
+                    auxLine.push(line[i]);
+                }
+                line = auxLine;
+            }
             setCpu(cpu);
             setTemp(temp);
             setHum(hum);

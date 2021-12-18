@@ -8,11 +8,16 @@ export default function Home() {
         e.preventDefault();
         router.push("aplicacoes/monitor");
     }
+    function vaiPrinter(e){
+        e.preventDefault();
+        router.push("aplicacoes/printer");
+    }
 
     return (
         <div className={"corpo"}>
-            <div>
-                <input type={"button"} className={"sombra w3-button "+styles.botoes} value={"Monitor"} onClick={vaiMonitor}/>
+            <div className={"coluna"}>
+                <input type={"button"} className={"w3-yellow botao w3-button"} value={"Monitor"} onClick={vaiMonitor}/>
+                <input type={"button"} className={"w3-yellow botao w3-button"} value={"Printer"} onClick={vaiPrinter}/>
             </div>
         </div>
     )

@@ -26,5 +26,16 @@ a {
   justify-content: center;
   flex-direction: column;
   background-color: black;
+}
 
+.botao{
+  border-radius: 5px!important;
+  width: 200px;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.coluna{
+  display: flex;
+  flex-direction: column;
 }
