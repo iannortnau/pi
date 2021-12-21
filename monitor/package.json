@@ -12,6 +12,8 @@
     "escpos": "^3.0.0-alpha.6",
     "escpos-serialport": "^3.0.0-alpha.4",
     "fs": "^0.0.1-security",
+    "md5": "^2.3.0",
+    "moment": "^2.29.1",
     "next": "12.0.7",
     "node-dht-sensor": "^0.4.3",
     "node-gyp": "^8.4.1",
@@ -21,6 +23,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-google-charts": "^3.0.15",
+    "react-qr-reader": "^2.2.1",
+    "react-webcam": "^6.0.0",
     "thermalprinter": "^0.3.10"
   },
   "devDependencies": {

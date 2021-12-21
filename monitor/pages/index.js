@@ -8,6 +8,7 @@ export default function Home() {
         e.preventDefault();
         router.push("aplicacoes/monitor");
     }
+
     function vaiPrinter(e){
         e.preventDefault();
         router.push("aplicacoes/printer");
@@ -16,8 +17,8 @@ export default function Home() {
     return (
         <div className={"corpo"}>
             <div className={"coluna"}>
-                <input type={"button"} className={"w3-yellow botao w3-button"} value={"Monitor"} onClick={vaiMonitor}/>
-                <input type={"button"} className={"w3-yellow botao w3-button"} value={"Printer"} onClick={vaiPrinter}/>
+                <input type={"button"} className={"botao w3-ripple"} value={"Monitor"} onClick={vaiMonitor}/>
+                <input type={"button"} className={"botao w3-ripple"} value={"Printer"} onClick={vaiPrinter}/>
             </div>
         </div>
     )
